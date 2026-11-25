@@ -1,4 +1,4 @@
-package herencia;
+package excursiones;
 
 public class Principal {
 
@@ -25,6 +25,9 @@ public class Principal {
 
 		System.out.println(excursionBuceo2.toString());
 		System.out.println(excursionBuceo2.calcularPrecio());
+		
+		
+
 	}
 
 }

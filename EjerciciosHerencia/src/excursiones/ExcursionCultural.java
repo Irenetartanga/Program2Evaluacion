@@ -1,4 +1,4 @@
-package herencia;
+package excursiones;
 
 public class ExcursionCultural  extends Excursion {
 	private boolean estudiantes;

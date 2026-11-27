@@ -6,6 +6,7 @@ public class Personaje {
 		this.nombre = nombre;
 		this.nivel = nivel;
 		this.puntosVida = puntosVida;
+		numeroDePersonajes++;
 	}
 	@Override
 	public String toString() {
@@ -29,9 +30,10 @@ public class Personaje {
 	public void setPuntosVida(int puntosVida) {
 		this.puntosVida = puntosVida;
 	}
-	private String nombre;
-	private int nivel=0;
-	private int puntosVida=0;
+	private String nombre; // este nombre es el this.nombre
+	private int nivel=0; // este nivel es el this.nivel
+	private int puntosVida=0; // este puntosVida es el this.puntosVida
+	private static int numeroDePersonajes=0; // para incrementar el numero de personajes
 
 
 	public void presentarse() {
@@ -41,7 +43,7 @@ public class Personaje {
 
 	}
 
-	public void recibirDanio() {
-
+	public void recibirDanio(int cantidad) {
+		setPuntosVida(puntosVida-cantidad);
 	}
 }

@@ -2,7 +2,7 @@ package reinoMedieval;
 
 public class Soldado extends Personaje{
 	private String arma;
-	public Soldado(String nombre, int nivel, int puntosVida, String arma, int armadura) {
+	public Soldado(String nombre, int nivel, int puntosVida, String arma, int armadura ) {
 		super(nombre, nivel, puntosVida);
 		this.arma = arma;
 		this.armadura = armadura;
@@ -11,18 +11,18 @@ public class Soldado extends Personaje{
 	private int armadura=0;
 
 	public void play() {
-		if (this.arma=="Espada Larga") {
+		if (this.arma.equalsIgnoreCase("Espada larga")) {
 			System.out.println("Daño infligido con la Espada Larga 6");
 		}
-		if (this.arma=="Lanza") {
+		if (this.arma.equalsIgnoreCase("Lanza")) {
 			System.out.println("Daño infligido con la Lanza 5");
 		}
 		else {
-			System.out.println("No tienes arma, no hces daño");
+			System.out.println("No tienes arma, no haces daño");
 		}
 	}
 
-	public void recibirDanio() {
-
+	public void recibirDanio(int cantidad) {
+		cantidad=cantidad-armadura;
 	}
 }
